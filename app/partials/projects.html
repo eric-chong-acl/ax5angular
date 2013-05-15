@@ -1,0 +1,49 @@
+<!--<h3>List of Projects</h3>
+
+<div>
+	<ul>
+		<li ng-repeat="project in projects">
+			{{project.id}} - {{project.name}}
+		</li>
+	</ul>
+</div>
+-->
+
+
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="content-wrapper">
+				<div class="project-wrapper bg-general clearfix">
+					<a class="new-project-link" ng-click="openNewProjectForm()"><i class="icon-plus icon-white new-project-icon"></i>New Project</a>
+
+					<div class="project-sections">
+						<div class="project-block" ng-repeat="project in projects">
+							<div class="project-image-block">
+						        <img class="projectIcon" src="img/defaultProject.png"/>
+						        <label ng-hide="editing" ng-click="editing=true" class="projectName">{{project.name}}</label>
+						        <form ng-show="editing" ng-submit="editing=false; updateProjectName(project)">
+						        	<input type="text" class= "projectNameEditor" ng-model="project.name" placeholder="Project Name" ng-required />
+						        </form>
+							</div>
+							
+							<div class="pull-right project-delete-btn">
+								<a ng-click="openConfirmBox(project)"><i class="icon-trash"></i></a>
+							</div>
+							
+							<div class="project-links">
+						        <ul>
+						        	<li><a href="#">Browse Project</a></li>
+					        		<li><a href="#">Run Test Analytics</a></li>
+					        		<li><a href="#">Users &#38; Permissions</a></li>
+					        		<li><a href="#">View Test Schedules</a></li>
+						        </ul>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

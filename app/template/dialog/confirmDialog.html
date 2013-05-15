@@ -1,0 +1,11 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="close()">×</button>
+	<h3>Confirmation</h3>
+</div>
+<div class="modal-body">
+	{{message}}
+</div>
+<div class="modal-footer">
+	<button class="btn" ng-click="close()">Cancel</button>    
+	<button class="btn btn-primary" ng-click="confirmAndClose(item)">Confirm</button>    
+</div>
